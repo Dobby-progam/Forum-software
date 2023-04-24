@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+include_once('scripts/php/functions.php');
+$result = getAuthenticationStatus();?>
 <html lang="en">
 
     <head>
@@ -11,9 +13,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#contact">Contact</a></li>
-            <?php
-            include_once('scripts/php/functions.php');
-            $result = getAuthenticationStatus();?>
+
             <?php if ($result == 404) :?>
                 <li style='float: right'><a href='login.php'>login</a></li>
                 <li style='float: right'><a href='register.php'>register</a></li>
